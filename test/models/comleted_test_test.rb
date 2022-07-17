@@ -1,0 +1,7 @@
+require "test_helper"
+
+class ComletedTestTest < ActiveSupport::TestCase
+  # test "the truth" do
+  #   assert true
+  # end
+end

@@ -37,6 +37,8 @@ group :development, :test do
   gem 'rubocop-rails', require: false
   # RuboCop is a Ruby static code analyzer
   gem 'rubocop', require: false
+  # This library provides functionality to send internet mail via SMTP, the Simple Mail Transfer Protocol.
+  gem 'net-smtp'
 end
 
 group :development do
