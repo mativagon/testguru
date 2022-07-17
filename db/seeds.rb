@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
@@ -25,9 +26,12 @@ question_3 = Question.create(body: 'Чем отличается метод setIn
 
 answer_1 = Answer.create(body: '<img>', correct: true, question_id: question_1.id)
 answer_2 = Answer.create(body: '<pic>', question_id: question_1.id)
-answer_3 = Answer.create(body: 'Первый символ строки преобразуется в верхний регистр, а остальные — в нижний.', correct: true, question_id: question_2)
-answer_4 = Answer.create(body: 'Первый символ строки преобразуется в нижний регистр, а остальные — в верхний.', question_id: question_2)
-answer_5 = Answer.create(body: 'Функция запускается не один раз, а периодически через указанный интервал времени.', correct: true, question_id: question_3.id)
+answer_3 = Answer.create(body: 'Первый символ строки преобразуется в верхний регистр, а остальные — в нижний.',
+                         correct: true, question_id: question_2)
+answer_4 = Answer.create(body: 'Первый символ строки преобразуется в нижний регистр, а остальные — в верхний.',
+                         question_id: question_2)
+answer_5 = Answer.create(body: 'Функция запускается не один раз, а периодически через указанный интервал времени.',
+                         correct: true, question_id: question_3.id)
 answer_6 = Answer.create(body: 'Функция запускается один раз.', question_id: question_3.id)
 
 completed_test_1 = CompletedTest.create(user_id: lebovski.id, test_id: html.id)
