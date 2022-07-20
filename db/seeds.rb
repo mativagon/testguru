@@ -16,9 +16,9 @@ lebovski = User.create(name: 'Lebovski', email: 'lebovski@gmail.com', password: 
 lupa = User.create(name: 'Lupa', email: 'lupa@gmail.com', password: 'password')
 marchenko = User.create(name: 'Marchenko', email: 'marchenko@gmail.com', password: '0123456789')
 
-html = Test.create(title: 'HTML', level: 1, category_id: frontend.id)
-ruby = Test.create(title: 'Ruby', level: 2, category_id: backend.id)
-javascript = Test.create(title: 'JavaScript', level: 3, category_id: machine_learning.id)
+html = Test.create(title: 'HTML', level: 1, category_id: frontend.id, user_id: marchenko.id)
+ruby = Test.create(title: 'Ruby', level: 2, category_id: backend.id, user_id: marchenko.id)
+javascript = Test.create(title: 'JavaScript', level: 3, category_id: machine_learning.id, user_id: marchenko.id)
 
 question_1 = Question.create(body: 'Какой тег позволяет вставлять картинки в HTML документы?', test_id: html.id)
 question_2 = Question.create(body: 'Что делает метод .capitalize?', test_id: ruby.id)
