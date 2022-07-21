@@ -16,9 +16,9 @@ lebovski = User.create(name: 'Lebovski', email: 'lebovski@gmail.com', password: 
 lupa = User.create(name: 'Lupa', email: 'lupa@gmail.com', password: 'password')
 marchenko = User.create(name: 'Marchenko', email: 'marchenko@gmail.com', password: '0123456789')
 
-html = Test.create(title: 'HTML', level: 1, category_id: frontend.id, user_id: marchenko.id)
-ruby = Test.create(title: 'Ruby', level: 2, category_id: backend.id, user_id: marchenko.id)
-javascript = Test.create(title: 'JavaScript', level: 3, category_id: machine_learning.id, user_id: marchenko.id)
+html = Test.create(title: 'HTML', level: 1, category_id: frontend.id, author_id: marchenko.id)
+ruby = Test.create(title: 'Ruby', level: 2, category_id: backend.id, author_id: marchenko.id)
+javascript = Test.create(title: 'JavaScript', level: 3, category_id: machine_learning.id, author_id: marchenko.id)
 
 question_1 = Question.create(body: 'Какой тег позволяет вставлять картинки в HTML документы?', test_id: html.id)
 question_2 = Question.create(body: 'Что делает метод .capitalize?', test_id: ruby.id)
@@ -33,7 +33,3 @@ answer_4 = Answer.create(body: 'Первый символ строки прео�
 answer_5 = Answer.create(body: 'Функция запускается не один раз, а периодически через указанный интервал времени.',
                          correct: true, question_id: question_3.id)
 answer_6 = Answer.create(body: 'Функция запускается один раз.', question_id: question_3.id)
-
-completed_test_1 = CompletedTest.create(user_id: lebovski.id, test_id: html.id)
-completed_test_2 = CompletedTest.create(user_id: lupa.id, test_id: ruby.id)
-completed_test_3 = CompletedTest.create(user_id: marchenko.id, test_id: javascript.id)

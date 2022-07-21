@@ -1,13 +1,11 @@
 # frozen_string_literal: true
 
 class User < ApplicationRecord
-  has_many :completed_tests
+  has_many :author_tests, class_name: :Test, inverse_of: :author, foreign_key: :author_id
   has_many :tests_users
   has_many :tests, through: :tests_users
 
   def tests_by_level(level)
-    Test.where(level:)
-        .joins('INNER JOIN completed_tests ON tests.id = completed_tests.test_id')
-        .where(completed_test: { user_id: id })
+    tests.where(level:)
   end
 end
