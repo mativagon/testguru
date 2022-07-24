@@ -7,9 +7,12 @@ class Test < ApplicationRecord
   has_many :users, through: :tests_users
   has_many :questions
 
+  scope :easy, -> { where(level: 0..1).order(created_at: :desc) }
+  scope :medium, -> { where(level: 2..4).order(created_at: :desc) }
+  scope :hard, -> { where(level: 5..Float::INFINITY).order(created_at: :desc) }
+  scope :category_name, -> (name) { joins(:category).where(category: { title: name }) }
+
   def self.tests_by_category(name)
-    Test.joins(:category)
-        .where(category: { title: name })
-        .order(title: 'desc').pluck(:title)
+    category_name(name).order(title: :desc).pluck(:title)
   end
 end
