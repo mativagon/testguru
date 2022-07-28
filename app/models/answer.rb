@@ -6,7 +6,7 @@ class Answer < ApplicationRecord
   ANSWERS_LIMIT = 4
 
   validates :body, presence: true
-  validates :validate_number_of_answers
+  validate :validate_number_of_answers
 
   scope :correct, -> { where(correct: true) }
 
