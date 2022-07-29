@@ -39,6 +39,7 @@ group :development, :test do
   gem 'rubocop', require: false
   # This library provides functionality to send internet mail via SMTP, the Simple Mail Transfer Protocol.
   gem 'net-smtp'
+  gem 'pry', '~> 0.13.1'
 end
 
 group :development do
