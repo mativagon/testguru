@@ -1,0 +1,9 @@
+<h1>
+  <%= @test.title %> (level: <%= @test.level %>)
+</h1>
+
+<h2>Вопросы:</h2>
+
+<%= render @test.questions %>
+<%= link_to 'Создать новый вопрос', new_test_question_path(@test) %> |
+<%= link_to 'Назад', tests_path %>
