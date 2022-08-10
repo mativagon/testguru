@@ -1,1 +1,13 @@
 <h1>Тест <%= @test_passage.test.title %> завершен!</h1>
+
+<p>
+  Вы ответили верно на <%= @test_passage.correct_questions %> из <%= @test_passage.test.questions.count %> вопросов.<br>
+  Процент правильных ответов:
+  <span class="<%= @test_passage.successfull? ? 'success-test-passage' : 'failed-test-passage' %>">
+    <%= @test_passage.success_percentage %>%
+  </span>
+</p>
+
+<p><%= @test_passage.successfull? ? 'Тест пройден!' : 'Тест не пройден, минимальный процент правильных ответов 85%, попробуйте снова.' %></p>
+
+<%= link_to 'К списку тестов', tests_path %>

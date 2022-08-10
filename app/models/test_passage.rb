@@ -6,8 +6,18 @@ class TestPassage < ApplicationRecord
   before_validation :before_validation_set_first_question, on: :create
   before_update :set_next_question
 
+  MIN_SUCCESS_PERCENTAGE = 85
+
   def completed?
     current_question.nil?
+  end
+
+  def success_percentage
+    ((correct_questions.to_f / test.questions.count) * 100).round
+  end
+
+  def successfull?
+    success_percentage >= MIN_SUCCESS_PERCENTAGE
   end
 
   def accept!(answer_ids)
@@ -16,6 +26,10 @@ class TestPassage < ApplicationRecord
     end
 
     save!
+  end
+
+  def question_number
+    self.test.questions.order(:id).index(current_question) + 1
   end
 
   private
