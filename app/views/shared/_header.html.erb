@@ -1,0 +1,13 @@
+<br>
+<h1><%= link_to 'TestGuru', root_path %></br></h1>
+
+<% if logged_in? %>
+  Добро пожаловать, <%= current_user.name %>!</br>
+  </br>
+  <%= link_to 'Выйти', logout_path, method: :delete %>
+<% else %>
+  <%= link_to 'Зарегистрироваться', signup_path %> |
+  <%= link_to 'Войти', login_path %>
+<% end %>
+</div>
+<hr/>
