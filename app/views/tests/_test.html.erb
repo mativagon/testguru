@@ -1,4 +1,6 @@
 <p>
   <%= link_to test.title, test_path(test) %> - <%= pluralize(test.questions.count, 'вопрос') %>
+  <nobr><%= link_to 'Изменить', edit_test_path(test) %> |
+    <%= link_to 'Удалить', test_path(test), data: { method: :delete } %></nobr>
   <%= button_to 'Начать проходить тест', start_test_path(test) %>
 </p>
