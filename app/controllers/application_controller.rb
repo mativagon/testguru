@@ -9,14 +9,10 @@ class ApplicationController < ActionController::Base
   private
 
   def authenticate_user!
-    save_path
     unless current_user
+      session[:forwarding_url] = request.original_url if request.get?
       redirect_to login_path, alert: 'Войдите в Ваш аккаунт!'
     end
-  end
-
-  def save_path
-    session[:forwarding_url] = request.original_url if request.get?
   end
 
   def current_user
