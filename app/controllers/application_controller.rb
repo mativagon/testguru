@@ -1,32 +1,4 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base
-  before_action :authenticate_user!
-
-  helper_method :current_user,
-                :logged_in?
-
-  private
-
-  def authenticate_user!
-    if current_user
-      session[:forwarding_url] = root_path
-    else
-      session[:forwarding_url] = request.original_url if request.get?
-      redirect_to login_path, alert: 'Войдите в Ваш аккаунт!'
-    end
-  end
-
-  def current_user
-    @current_user ||= User.find_by(id: session[:user_id]) if session[:user_id]
-  end
-
-  def logged_in?
-    current_user.present?
-  end
-
-  def logout
-    reset_session
-    @current_user = nil
-  end
 end

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Testguru</title>
+  <title>Admin Panel | TestGuru</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
@@ -11,9 +11,8 @@
 </head>
 
 <body>
-<%= render 'shared/header' %>
+<%= render 'admin/nav' %>
 <%= render 'shared/flash' %>
 <%= yield %>
-<%= render 'layouts/footer', author: 'mativagon', repo: 'testguru' %>
 </body>
 </html>
