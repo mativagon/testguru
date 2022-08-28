@@ -1,0 +1,187 @@
+ru:
+  hello: "Привет мир"
+  helpers:
+    select:
+      prompt: "Сделайте выбор"
+    submit:
+      answer:
+        create: "Создать вариант ответа"
+        update: "Изменить вариант ответа"
+      question:
+        create: "Создать вопрос"
+        update: "Изменить вопрос"
+      test:
+        create: "Создать тест"
+        update: "Изменить тест"
+    label:
+      answer:
+        body: "Содержание"
+        correct: "Верный?"
+      question:
+        body: "Содержание"
+      test:
+        title: "Название"
+        level: "Уровень"
+        category_id: "Категория"
+  layouts:
+    footer:
+      think: "Учебный проект в онлайн-школе Thinknetica"
+  pages:
+    home:
+      header: "Добро пожаловать на проект"
+      links:
+        tests: "Тесты"
+  tests:
+    test:
+      level: "Уровень"
+      question:
+        zero: "%{count} вопросов"
+        one: "%{count} вопрос"
+        few: "%{count} вопроса"
+        many: "%{count} вопросов"
+        other: "%{count} вопросов"
+      buttons:
+        start: "Пройти тест"
+    index:
+      header: "Доступные тесты"
+      links:
+        back: "Назад"
+  shared:
+    header:
+      welcome: "Добро пожаловать"
+      links:
+        logout: "Выйти"
+        sign_up: "Зарегистрироваться"
+        sign_in: "Войти"
+  admin:
+    base:
+      rights: "Вы должны иметь права администратора для просмотра данной страницы."
+    nav:
+      admin_panel: "Панель администратора"
+      welcome: "Добро пожаловать"
+      links:
+        logout: "Выйти"
+    answers:
+      new:
+        header: "Создание нового варианта ответа"
+        links:
+          back: "Назад"
+      edit:
+        header: "Изменение варианта ответа"
+        links:
+          back: "Назад"
+      show:
+        header: "Вопрос"
+        variant: "Вариант ответа:"
+        correct: "Верный ответ:"
+        links:
+          edit: "Изменить"
+          back: "Назад"
+      answer:
+        links:
+          show: "Посмотреть"
+          edit: "Изменить"
+          destroy: "Удалить"
+    questions:
+      form:
+        links:
+          back: "Назад"
+      new:
+        header: "Создать новый вопрос для теста %{title}"
+      edit:
+        header: "Изменить вопрос для теста %{title}"
+      show:
+        header: "Вопрос %{title}"
+        variants: "Варианты ответов:"
+        links:
+          new: "Новый вариант ответа"
+          back: "Назад"
+      question:
+        links:
+          show: "Посмотреть"
+          edit: "Изменить"
+          destroy: "Удалить"
+    tests:
+      form:
+        links:
+          back: "Назад"
+      new:
+        header: "Создание нового теста"
+      edit:
+        header: "Изменение теста"
+      show:
+        header: "Тест %{title} Уровень: %{level}"
+        questions: "Вопросы:"
+        links:
+          edit: "Изменить"
+          new: "Создать новый вопрос"
+          back: "Назад"
+      test:
+        level: "Уровень"
+        question:
+          zero: "%{count} вопросов"
+          one: "%{count} вопрос"
+          few: "%{count} вопроса"
+          many: "%{count} вопросов"
+          other: "%{count} вопросов"
+        links:
+          edit: "Изменить"
+          destroy: "Удалить"
+      create:
+        success: "Тест успешно создан."
+      index:
+        header: "Доступные тесты"
+        links:
+          new: "Создать новый тест"
+  test_passages:
+    show:
+      header: "Прохождение теста"
+      question: "Вопрос"
+      from: "из"
+      buttons:
+        next: "Следующий вопрос"
+    result:
+      header: "Тест %{title} успешно завершён!"
+      correct: "Правильных ответов"
+      from: "из"
+      percentage: "Процент правильных ответов"
+      success: "Тест пройден!"
+      failure: "Тест не пройден, минимальный процент правильных ответов 85%, попробуйте снова."
+      links:
+        tests: "К списку тестов"
+  tests_mailer:
+    completed_test:
+      subject: "Вы завершили тест!"
+  devise:
+    shared:
+      links:
+        links:
+          log_in: "Войти"
+          sign_up: "Зарегистрироваться"
+          forgot: "Забыли пароль?"
+          confirmation: "Не получили письмо с инструкциями по подтверждению?"
+          unlock: "Не получили письмо с инструкциями по разблокировке?"
+          omniauth: "Войти с"
+    registrations:
+      new:
+        header: "Регистрация"
+        characters: "символов как минимум"
+        submit: "Зарегистрироваться"
+    sessions:
+      new:
+        header: "Вход в аккаунт"
+        submit: "Войти"
+    confirmations:
+      new:
+        header: "Повторно выслать инструкции по подтверждению"
+        submit: "Выслать"
+    passwords:
+      new:
+        header: "Забыли пароль?"
+        submit: "Выслать инструкции"
+      edit:
+        header: "Изменение пароля"
+        new_password: "Новый пароль"
+        characters: "символов как минимум"
+        confirm: "Подтвердите новый пароль"
+        submit: "Сменить пароль"

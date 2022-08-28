@@ -2,11 +2,11 @@
 <h1><%= link_to 'TestGuru', root_path %></br></h1>
 
 <% if user_signed_in? %>
-  Добро пожаловать, <%= current_user.email %>!</br>
+  <%= t('.welcome') %>, <%= current_user.email %>!</br>
   </br>
-  <%= link_to 'Выйти', destroy_user_session_path, method: :delete %>
+  <%= link_to t('.links.logout'), destroy_user_session_path, method: :delete %>
 <% else %>
-  <%= link_to 'Зарегистрироваться', new_user_registration_path %> |
-  <%= link_to 'Войти', user_session_path %>
+  <%= link_to t('.links.sign_up'), new_user_registration_path %> |
+  <%= link_to t('.links.sign_in'), user_session_path %>
 <% end %>
 <hr/>
