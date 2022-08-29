@@ -10,7 +10,7 @@ class Admin::AnswersController < Admin::BaseController
     @answer = @question.answers.build(answer_params)
 
     if @answer.save
-      redirect_to admin_question_path(@question), notice: 'Ответ успешно создан.'
+      redirect_to admin_question_path(@question)
     else
       render :new
     end
