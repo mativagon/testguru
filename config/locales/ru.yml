@@ -50,6 +50,7 @@ ru:
     header:
       welcome: "Добро пожаловать"
       links:
+        admin: "Панель администратора"
         logout: "Выйти"
         sign_up: "Зарегистрироваться"
         sign_in: "Войти"
@@ -171,6 +172,7 @@ ru:
       new:
         header: "Вход в аккаунт"
         submit: "Войти"
+        remember: "Запомнить меня"
     confirmations:
       new:
         header: "Повторно выслать инструкции по подтверждению"

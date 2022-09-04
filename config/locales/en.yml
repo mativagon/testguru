@@ -48,6 +48,7 @@ en:
     header:
       welcome: "Welcome"
       links:
+        admin: "Admin panel"
         logout: "Logout"
         sign_up: "Sign up"
         sign_in: "Sign in"
@@ -167,6 +168,7 @@ en:
       new:
         header: "Log in"
         submit: "Log in"
+        remember: "Remember me"
     confirmations:
       new:
         header: "Resend confirmation instructions"

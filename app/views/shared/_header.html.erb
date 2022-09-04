@@ -1,12 +1,23 @@
-<br>
-<h1><%= link_to 'TestGuru', root_path %></br></h1>
-
-<% if user_signed_in? %>
-  <%= t('.welcome') %>, <%= current_user.email %>!</br>
-  </br>
-  <%= link_to t('.links.logout'), destroy_user_session_path, method: :delete %>
+<span class="navbar navbar-light bg-primary">
+  <div class="container">
+<h1><%= link_to 'TestGuru', root_path, class: 'navbar-brand px-3 text-white' %></br></h1>
+    <% if user_signed_in? %>
+    <div class="nav col-12 px-3 text-white">
+  <%= t('.welcome') %>, <%= current_user.first_name %>!</br>
+    </div>
+      <% if current_user&.admin? %>
+         <div class="nav col-12 text-white">
+    <%= link_to t('.links.admin'), admin_tests_path, class: 'nav-link text-white' %>
+         </div>
+    <% end %>
+      <div class="nav col-12 text-white">
+      <%= link_to t('.links.logout'), delete_user_session_path, method: :delete, class: 'nav-link text-white' %>
+        </div>
 <% else %>
-  <%= link_to t('.links.sign_up'), new_user_registration_path %> |
-  <%= link_to t('.links.sign_in'), user_session_path %>
+      <div class="nav col-12 text-white">
+  <%= link_to t('.links.sign_up'), new_user_registration_path, class: 'nav-link text-white' %>
+      <%= link_to t('.links.sign_in'), user_session_path, class: 'nav-link text-white' %>
+      </div>
 <% end %>
-<hr/>
+</div>
+</span>
