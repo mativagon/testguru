@@ -3,6 +3,9 @@
 Rails.application.routes.draw do
   devise_for :users, path: :gurus, path_names: { sign_in: :login, sign_out: :logout },
              controllers: { registrations: 'registrations' }
+  as :user do
+    get 'gurus/logout' => 'devise/sessions#destroy', :as => :delete_user_session
+  end
 
   root 'pages#home'
 
