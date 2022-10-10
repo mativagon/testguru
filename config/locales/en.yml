@@ -1,5 +1,9 @@
 en:
   hello: "Hello world"
+  services:
+    gist_question_service:
+      gist_params:
+        description: "A question about %{test_title} from TestGuru"
   helpers:
     select:
       prompt: "Please select"
@@ -53,6 +57,14 @@ en:
         sign_up: "Sign up"
         sign_in: "Sign in"
   admin:
+    gists:
+      index:
+        header: 'Created Gists'
+        table:
+          id: 'ID'
+          question: 'Question'
+          link: 'Link to Github'
+          email: 'Author email'
     base:
       rights: "You need authorize as admin to view this page."
     nav:
@@ -135,8 +147,13 @@ en:
       header: "Passing the %{title} test"
       question: "Question"
       from: "from"
+      links:
+        create_gist: "Gist question"
       buttons:
         next: "Next question"
+    gist:
+      success: 'Gist created! Click <a href="%{link}" target="_blank">here</a> to see Gist.'
+      failure: "Gist failed to create, try again."
     result:
       header: "The %{title} test was completed!"
       correct: "Correct answers"

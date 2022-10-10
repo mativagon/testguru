@@ -299,7 +299,7 @@ DEPENDENCIES
   letter_opener
   listen (~> 3.3)
   net-smtp
-  octokit (~> 4.25, >= 4.25.1)
+  octokit (>= 4.25.1)
   pry (~> 0.13.1)
   puma (~> 5.0)
   rack-mini-profiler (~> 2.0)

@@ -32,8 +32,8 @@ gem 'bootsnap', '>= 1.4.4', require: false
 
 gem 'rails-i18n', '~> 7.0', '>= 7.0.3'
 
-gem 'jquery-rails'
 gem 'bootstrap', '~>5.1'
+gem 'jquery-rails'
 
 gem 'devise', '~> 4.0'
 
@@ -60,8 +60,8 @@ group :development do
   gem 'listen', '~> 3.3'
   gem 'rack-mini-profiler', '~> 2.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'spring'
   gem 'letter_opener'
+  gem 'spring'
 end
 
 group :test do
