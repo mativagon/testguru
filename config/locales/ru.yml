@@ -1,5 +1,9 @@
 ru:
   hello: "Привет мир"
+  services:
+    gist_question_service:
+      gist_params:
+        description: "Вопрос теста %{test_title} из TestGuru"
   helpers:
     select:
       prompt: "Сделайте выбор"
@@ -55,6 +59,14 @@ ru:
         sign_up: "Зарегистрироваться"
         sign_in: "Войти"
   admin:
+    gists:
+      index:
+        header: 'Созданные Gist'
+        table:
+          id: 'ID'
+          question: 'Вопрос'
+          link: 'Ссылка на Github'
+          email: 'Почта автора'
     base:
       rights: "Вы должны иметь права администратора для просмотра данной страницы."
     nav:
@@ -139,14 +151,19 @@ ru:
       header: "Прохождение теста"
       question: "Вопрос"
       from: "из"
+      links:
+        create_gist: "Создать Gist с вопросом"
       buttons:
         next: "Следующий вопрос"
+    gist:
+      success: 'Gist создан! Пройдите по <a href="%{link}" target="_blank">этой ссылке</a> чтобы открыть Gist.'
+      failure: "Gist не был создан, произошла ошибка."
     result:
       header: "Тест %{title} успешно завершён!"
       correct: "Правильных ответов"
       from: "из"
       percentage: "Процент правильных ответов"
-      success: "Тест пройден!"
+      success: 'Тест пройден!'
       failure: "Тест не пройден, минимальный процент правильных ответов 85%, попробуйте снова."
       links:
         tests: "К списку тестов"
