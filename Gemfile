@@ -34,6 +34,7 @@ gem 'rails-i18n', '~> 7.0', '>= 7.0.3'
 
 gem 'bootstrap', '~>5.1'
 gem 'jquery-rails'
+gem 'octicons_helper'
 
 gem 'devise', '~> 4.0'
 

@@ -48,6 +48,11 @@ ru:
         start: "Пройти тест"
     index:
       header: "Доступные тесты"
+      table:
+        title: 'Название'
+        level: 'Уровень'
+        questions_count: 'Количество вопросов'
+        actions: 'Действия'
       links:
         back: "Назад"
   shared:
