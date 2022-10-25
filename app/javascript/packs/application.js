@@ -11,6 +11,7 @@ import "@popperjs/core"
 import "bootstrap/js/dist/dropdown"
 import '../utilities/sorting'
 import './registration'
+import '../utilities/form_inline'
 
 
 Rails.start()

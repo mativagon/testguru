@@ -1,5 +1,6 @@
 class Admin::TestsController < Admin::BaseController
-  before_action :set_test, only: %i[show start destroy update edit]
+  before_action :set_test, only: %i[show start destroy update edit update_inline]
+  before_action :set_tests, only: %i[index update_inline]
 
   def new
     @test = Test.new
@@ -10,6 +11,14 @@ class Admin::TestsController < Admin::BaseController
       redirect_to admin_test_path(@test)
     else
       render :edit
+    end
+  end
+
+  def update_inline
+    if @test.update(test_params)
+      redirect_to admin_tests_path
+    else
+      render :index
     end
   end
 
@@ -28,11 +37,13 @@ class Admin::TestsController < Admin::BaseController
     end
   end
 
-  def index
-    @tests = Test.all
-  end
+  def index; end
 
   private
+
+  def set_tests
+    @tests = Test.all
+  end
 
   def set_test
     @test = Test.find(params[:id])
