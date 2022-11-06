@@ -134,6 +134,8 @@ ru:
           edit: "Изменить"
           new: "Создать новый вопрос"
           back: "Назад"
+      form_inline:
+        update: "Изменить"
       test:
         level: "Уровень"
         question:

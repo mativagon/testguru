@@ -16,6 +16,11 @@ class TestPassage < ApplicationRecord
     ((correct_questions.to_f / test.questions.count) * 100).round
   end
 
+  def current_progress
+    passed_questions_count = test.questions.order(:id).index(current_question)
+    (passed_questions_count.to_f / test.questions.count * 100).round
+  end
+
   def successfull?
     success_percentage >= MIN_SUCCESS_PERCENTAGE
   end
