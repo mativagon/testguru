@@ -39,7 +39,11 @@ gem 'octicons_helper'
 gem 'devise', '~> 4.0'
 
 gem 'faraday'
+gem 'faraday-retry'
 gem 'octokit', '>= 4.25.1'
+gem 'net-imap', require: false
+gem 'net-pop', require: false
+gem 'net-smtp', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,9 +53,6 @@ group :development, :test do
   # RuboCop is a Ruby static code analyzer
   gem 'rubocop', require: false
   # This library provides functionality to send internet mail via SMTP, the Simple Mail Transfer Protocol.
-  gem 'net-smtp', require: false
-  gem 'net-imap', require: false
-  gem 'net-pop', require: false
   gem 'pry', '~> 0.13.1'
 end
 
