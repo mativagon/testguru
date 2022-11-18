@@ -8,7 +8,7 @@ ruby '3.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -49,7 +49,9 @@ group :development, :test do
   # RuboCop is a Ruby static code analyzer
   gem 'rubocop', require: false
   # This library provides functionality to send internet mail via SMTP, the Simple Mail Transfer Protocol.
-  gem 'net-smtp'
+  gem 'net-smtp', require: false
+  gem 'net-imap', require: false
+  gem 'net-pop', require: false
   gem 'pry', '~> 0.13.1'
 end
 
