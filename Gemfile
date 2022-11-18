@@ -39,6 +39,7 @@ gem 'octicons_helper'
 gem 'devise', '~> 4.0'
 
 gem 'faraday'
+gem 'faraday-retry'
 gem 'octokit', '>= 4.25.1'
 
 group :development, :test do

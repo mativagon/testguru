@@ -14,7 +14,8 @@ machine_learning = Category.create(title: 'Machine Learning')
 
 lebovski = User.create(first_name: 'Lebovski', last_name: 'Lebovski', email: 'lebovski@gmail.com', password: 'qwerty')
 lupa = User.create(first_name: 'Lupa', last_name: 'Lupa', email: 'lupa@gmail.com', password: 'password')
-marchenko = User.create(first_name: 'Marchenko', last_name: 'Marchenko', email: 'marchenko@gmail.com', password: '0123456789')
+marchenko = User.create(first_name: 'Marchenko', last_name: 'Marchenko', email: 'marchenko@gmail.com', password: '0123456789', type: 'Admin')
+marchenko.confirm
 
 html = Test.create(title: 'HTML', level: 1, category_id: frontend.id, author_id: marchenko.id)
 ruby = Test.create(title: 'Ruby', level: 2, category_id: backend.id, author_id: marchenko.id)
