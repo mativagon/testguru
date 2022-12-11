@@ -65,13 +65,46 @@ ru:
         back: "Назад"
   shared:
     header:
+      badge: "Бэйджи"
       welcome: "Добро пожаловать"
       links:
+        badges: "Бэйджи"
         admin: "Панель администратора"
         logout: "Выйти"
         sign_up: "Зарегистрироваться"
         sign_in: "Войти"
+  badges:
+    index:
+      header: "Мои бэйджи"
+      badge: "Название"
+      image: "Иконка"
   admin:
+    badges:
+      create:
+        success: "Бейдж успешно создан"
+      update:
+        success: "Бейдж успешно обновлен"
+      destroy:
+        success: "Бейдж успешно удален"
+      index:
+        header: "Бейджи"
+        title: "Нзавание"
+        image: "Иконка"
+        action: "Действия"
+        links:
+          new_badge: "Создать бейдж"
+      new:
+        header: "Новый бейдж"
+        links:
+          back: "Назад"
+      edit:
+        header: "Изменить бейдж"
+        links:
+          back: "Назад"
+      badge:
+        links:
+          edit: "Изменить"
+          delete: "Удалить"
     gists:
       index:
         header: 'Созданные Gist'

@@ -9,9 +9,15 @@
          <div class="nav col-12 text-white">
     <%= link_to t('.links.admin'), admin_tests_path, class: 'nav-link text-white' %>
          </div>
+        <div class="nav col-12 text-white">
+    <%= link_to t('.badge'), admin_badges_path, class: "nav-link text-white" %>
+         </div>
     <% end %>
       <div class="nav col-12 text-white">
       <%= link_to t('.links.logout'), delete_user_session_path, method: :delete, class: 'nav-link text-white' %>
+        </div>
+      <div class="nav col-12 text-white">
+      <%= link_to t('.links.badge'), badges_path, class: "nav-link text-white" %>
         </div>
 <% else %>
       <div class="nav col-12 text-white">
