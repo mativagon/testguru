@@ -27,9 +27,17 @@ ru:
         title: "Название"
         level: "Уровень"
         category_id: "Категория"
+  contacts:
+    new:
+      header: 'Отправьте нам сообщение'
+      message: 'Сообщение'
+      buttons:
+        send: 'Отправить'
   layouts:
     footer:
       think: "Учебный проект в онлайн-школе Thinknetica"
+      links:
+        contacts: 'Связаться с нами'
   pages:
     home:
       header: "Добро пожаловать на проект"

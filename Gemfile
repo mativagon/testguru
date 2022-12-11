@@ -8,7 +8,7 @@ ruby '3.1.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', '~> 1.4'
+gem 'pg'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
@@ -39,7 +39,11 @@ gem 'octicons_helper'
 gem 'devise', '~> 4.0'
 
 gem 'faraday'
+gem 'faraday-retry'
 gem 'octokit', '>= 4.25.1'
+gem 'net-imap', require: false
+gem 'net-pop', require: false
+gem 'net-smtp', require: false
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -49,7 +53,6 @@ group :development, :test do
   # RuboCop is a Ruby static code analyzer
   gem 'rubocop', require: false
   # This library provides functionality to send internet mail via SMTP, the Simple Mail Transfer Protocol.
-  gem 'net-smtp'
   gem 'pry', '~> 0.13.1'
 end
 

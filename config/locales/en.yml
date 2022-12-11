@@ -27,9 +27,17 @@ en:
         title: "Title"
         level: "Level"
         category_id: "Category"
+  contacts:
+    new:
+      header: 'Send us your message'
+      message: 'Message'
+      buttons:
+        send: 'Send'
   layouts:
     footer:
       think: "Educational project at Thinknetica online school"
+      links:
+        contacts: 'Contact with us'
   pages:
     home:
       header: "Welcome to the project"
