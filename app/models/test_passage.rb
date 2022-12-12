@@ -60,6 +60,6 @@ class TestPassage < ApplicationRecord
   end
 
   def set_next_question
-    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first rescue nil
+    self.current_question = test.questions.order(:id).where('id > ?', current_question.id).first
   end
 end

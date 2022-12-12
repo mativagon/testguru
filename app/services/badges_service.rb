@@ -14,9 +14,9 @@ class BadgeService
   private
 
   def on_first_try(badge)
-    @user.test_passages.where(test: @test).count == 1 &&
+    @test.title == badge.subject_name &&
       @test_passage.successful? &&
-      @test.title == badge.subject_name
+      @user.test_passages.where(test: @test).count == 1
   end
 
   def all_by_category(badge)
@@ -25,7 +25,7 @@ class BadgeService
 
     successful_tests = Test.joins(:test_passages).where(category: category,
                                                         test_passages: { completed: true, user: @user }).distinct
-    @test.category.tests.count == successful_tests.count
+    Test.tests_by_category(@test.category) == successful_tests.count
   end
 
   def all_by_level(badge)
