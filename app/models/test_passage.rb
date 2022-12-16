@@ -23,7 +23,7 @@ class TestPassage < ApplicationRecord
   end
 
   def successfull?
-    success_percentage >= MIN_SUCCESS_PERCENTAGE
+    success_percentage >= MIN_SUCCESS_PERCENTAGE && !time_over?
   end
 
   def accept!(answer_ids)
@@ -36,6 +36,12 @@ class TestPassage < ApplicationRecord
 
   def question_number
     self.test.questions.order(:id).index(current_question) + 1
+  end
+
+  def time_over?
+    return false if test.timer.nil?
+
+    created_at + test.timer.minutes < Time.zone.now
   end
 
   private
