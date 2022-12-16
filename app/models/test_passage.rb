@@ -5,6 +5,7 @@ class TestPassage < ApplicationRecord
 
   before_validation :before_validation_set_first_question, on: :create
   before_update :set_next_question
+  before_update :update_completed
 
   MIN_SUCCESS_PERCENTAGE = 85
 
@@ -38,6 +39,10 @@ class TestPassage < ApplicationRecord
   end
 
   private
+
+  def update_completed
+    self.completed = true if successfull?
+  end
 
   def before_validation_set_first_question
     self.current_question = test.questions.first if test.present?

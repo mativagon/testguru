@@ -63,13 +63,46 @@ en:
         back: "Back"
   shared:
     header:
+      badge: "Badges"
       welcome: "Welcome"
       links:
+        badges: "Badges"
         admin: "Admin panel"
         logout: "Logout"
         sign_up: "Sign up"
         sign_in: "Sign in"
+  badges:
+    index:
+      header: "My badges"
+      badge: "Title"
+      image: "Image"
   admin:
+    badges:
+      create:
+        success: "Badge was successfully created"
+      update:
+        success: "Badge was successfully updated"
+      destroy:
+        success: "Badge was successfully deleted"
+      index:
+        header: "Badges"
+        title: "Title"
+        image: "Image"
+        action: "Action"
+        links:
+          new_badge: "Create badge"
+      new:
+        header: "New badge"
+        links:
+          back: "Back"
+      edit:
+        header: "Edit badge"
+        links:
+          back: "Back"
+      badge:
+        links:
+          edit: "Edit"
+          delete: "Delete"
     gists:
       index:
         header: 'Created Gists'
