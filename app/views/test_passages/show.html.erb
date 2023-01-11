@@ -1,6 +1,8 @@
 <h1><%= t('.header', title: @test_passage.test.title) %></h1>
 <h2><%= t('.question') %> <%= @test_passage.question_number %> <%= t('.from') %> <%= @test_passage.test.questions.count %></h2>
 
+<%= timer(@remaining_seconds.to_i) %>
+
 <div class="progress mb-4">
   <div
       class="progress-bar bg-success" role="progressbar"
@@ -23,5 +25,5 @@
   <% end %>
 
   <p><%= link_to t('.links.create_gist'), gist_test_passage_path(@test_passage), method: :post %></p>
-  <p><%= form.submit t('.buttons.next')%></p>
+  <p><%= form.submit t('.buttons.next'), id: 'next-question' %></p>
 <% end %>
